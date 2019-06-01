@@ -52,7 +52,7 @@ popImage.src = "img/pop.png";
 /** GAME OBJECTS **/
 // Hero object
 var hero = {
-	speed: 256, // movement in pixels per second
+	speed: 128, // movement in pixels per second
 	x: 0,
 	y: 0,
 	dir: 0, // 0 is left, 1 is right
@@ -62,7 +62,7 @@ var hero = {
 
 // Cat object
 var cat = {
-	speed: 128,
+	speed: 64,
 	x: 0,
 	y: 110,
 	dir: 0, // 0 is coming from left, 1 is coming from right
