@@ -52,7 +52,7 @@ popImage.src = "img/pop.png";
 /** GAME OBJECTS **/
 // Hero object
 var hero = {
-	speed: 128, // movement in pixels per second
+	speed: 256, // movement in pixels per second
 	x: 0,
 	y: 0,
 	dir: 0, // 0 is left, 1 is right
@@ -62,7 +62,7 @@ var hero = {
 
 // Cat object
 var cat = {
-	speed: 64,
+	speed: 128,
 	x: 0,
 	y: 110,
 	dir: 0, // 0 is coming from left, 1 is coming from right
@@ -318,6 +318,11 @@ function main() {
 		ctx.fillText( "[restart]", canvas.width/ 2.5, ( canvas.height / 4 ) * 3 );
 		canvas.onclick = function () { 
 			window.location.reload(); 
+		}
+		document.body.onkeypress = function() {
+			if ( 32 in keysDown ) {
+				window.location.reload(); 
+			}
 		}
 	}
 	//console.log( debugCounter );
